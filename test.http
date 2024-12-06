@@ -1,0 +1,68 @@
+
+###
+POST http://localhost:3000/Projects
+Content-Type: application/json
+
+{
+  "name": "Kevan",
+  "description": "Voici mon projet"
+}
+
+
+###
+# Obtenir une liste de projets
+GET http://localhost:3000/Projects
+
+
+###
+# Supprimer un projet
+DELETE http://localhost:3000/Projects/6752d5e31999da4f3abc9f5e
+
+
+###
+# Modifier un projet
+PUT http://localhost:3000/Projects/6752d66a1999da4f3abc9f64
+Content-Type: application/json
+
+{
+  "name": "Leo",
+  "description": "J'ai modifier mon projet"
+}
+
+
+###
+# Créer une tâche (remplacer {projectId})
+POST http://localhost:3000/Ouvrages
+Content-Type: application/json
+
+{
+  "projectId": "6752d66a1999da4f3abc9f64",
+  "title": "Mon premier Ouvrage",
+  "dueDate": "03/12/2024"
+}
+
+
+###
+# Obtenir une liste de tâches
+GET http://localhost:3000/Ouvrages
+
+
+###
+# Supprimer une tâche
+DELETE http://localhost:3000/taches/6752f9e475de22f6478e886d
+
+
+###
+# Modifier une tâche
+PUT http://localhost:3000/taches/6752d66a1999da4f3abc9f64
+Content-Type: application/json
+
+{
+  "title": "Nous venons de modifier l'ouvrage",
+  "dueDate": "27/10/2005"
+}
+
+
+###
+# Récupérer tache avec l'id
+GET http://localhost:3000/taches/6752d66a1999da4f3abc9f64
